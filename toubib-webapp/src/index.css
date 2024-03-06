@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "PoynterOSDisp-Semibold";
+  src: url(./fonts/PoynterOSDisp-Semibold.otf) format("opentype");
+}
+
+:root {
+  --beige: #ffefe2;
+  --dark: #212020;
+}
