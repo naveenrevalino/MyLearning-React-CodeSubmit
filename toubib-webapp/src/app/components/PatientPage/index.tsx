@@ -36,11 +36,20 @@ const PatientPage = () => {
     .catch( function(error) { console.log(error)})
   }
 
-  const deletePatientHandler = (patient_id:number) => {
-    getBaseURL.delete(`/v1/patients/`+ patient_id)
-    .then( (response) => { console.log(response) })
+  // Delete Patient ( Required : Patient ID )
+  const deletePatientHandler = async(patient_id:number) => {
+    const confirmOperation = window.confirm("Click on Ok to delete the patient record.");
+    if (confirmOperation) {
+    await getBaseURL.delete(`/v1/patients/`+ patient_id)
+    .then( (response) => { 
+      if (response.status = 204) {
+        const updatedList = patient.filter( p => p.id !==patient_id )
+        setPatient(updatedList)
+      }
+     })
     .then( () => { console.log(`Patient Record ID: ${patient_id} has been deleted`) })
     .catch( (error) => { console.log(error) })
+    }
   }
 
   // UseEffect : To Load Patients Record When App Mounts
