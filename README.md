@@ -16,10 +16,10 @@ After refining, the team believes that it should take at most 4 hours.
 
 You have to complete these 4 tasks:
 
-1. Connect the app to the API
-2. Create a responsive grid card layout for the patients
-3. Add a pagination for the patient list
-4. Deliver the delete patient endpoint
+1. Connect the app to the API : Done
+2. Create a responsive grid card layout for the patients : Done
+3. Add a pagination for the patient list : Done
+4. Deliver the delete patient endpoint : TODO
 
 ## 1. Connect the app to the API
 
