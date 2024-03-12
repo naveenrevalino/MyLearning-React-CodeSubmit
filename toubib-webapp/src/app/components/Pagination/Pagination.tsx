@@ -1,27 +1,36 @@
-
 import "./Pagination.css";
 
-const Pagination = ( { totalNumberOfPatientsRecord, numberOfRecordsPerPage, setCurrentPage }) => {
 
-    // Create an array with the page numbers
-    let pageNumbers = [];
-    for ( let i = 1; i<= Math.ceil(totalNumberOfPatientsRecord/numberOfRecordsPerPage) ; i++ ) {
-        pageNumbers.push(i);
-    }
+/**
+ * 
+ * @param param1 : Total : Total number of records we get from database.
+ * @param param2 : Limit : Number of records to display on each page.
+ * @param param3 : setCurrentPageNumber : Manages the current page state.
+ * 
+ * @returns : Pagination buttons to be displayed at the bottom of the parients grid.
+ */
+
+// Create Array : Based on the size of the records returned from the database.
+const range = ( start:number, end:number ) => {
+    return ( [...Array(end).keys()].map( (eachElement)=> eachElement+start) )
+}
+
+const Pagination = ( { total, limit, setCurrentPageNumber }) => {
+
+    const pageCount = Math.ceil( total/limit );
+    const pages = range(1, pageCount);
+
 
     return (
-    <div className="pagination">
+    <ul className="pagination">
+        <button onClick={ () => {setCurrentPageNumber(pages[0])} } className="pagination-jump">First</button>
         {
-        pageNumbers.map
-        (
-            (pageNumber, index) => {
-                return (
-                <button key={index} onClick={ () => {setCurrentPage(pageNumber)} } className="pagination-button">{pageNumber}</button>
-                )
-            } 
-        )
+            pages.map( (eachPage) => (
+            <button key={eachPage} onClick={ () => {setCurrentPageNumber(eachPage)} } className="pagination-button">{eachPage}</button>
+            ))
         }
-    </div>
+        <button onClick={ () => {setCurrentPageNumber(pages.length)} } className="pagination-jump">Last</button>
+    </ul>
     );
 
 }

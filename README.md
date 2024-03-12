@@ -19,26 +19,26 @@ You have to complete these 4 tasks:
 1. Connect the app to the API : Done
 2. Create a responsive grid card layout for the patients : Done
 3. Add a pagination for the patient list : Done
-4. Deliver the delete patient endpoint : TODO
+4. Deliver the delete patient endpoint : Done
 
-## 1. Connect the app to the API
+## 1. Connect the app to the API : Completed
 
 Connect the app to the API to display the list of patients.
 The app should automatically fetch patients when it starts.
 Add tests.
 
-## 2. Create a responsive grid card layout for the patients
+## 2. Create a responsive grid card layout for the patients : Completed
 
 Try to replicate the styling (it doesn't need to be pixel perfect) of the patient cards, and the responsiveness of the grid layout as built here:
 
 https://user-images.githubusercontent.com/6495392/155193291-fc99a407-6ba9-4e7c-bd4a-6b060bd35302.mov
 
-## 3. Add a pagination for the patient list
+## 3. Add a pagination for the patient list : Completed
 
 The results should display 10 patients per page, with a way of navigating directly to the first and last page.
 The pagination should be responsive.
 
-## 4. Complete the delete patient feature
+## 4. Complete the delete patient feature : Completed
 
 Add the endpoint with the relevant tests.
 Hook the app to use the newly created endpoint to be able to delete patients by clicking on a trash icon.

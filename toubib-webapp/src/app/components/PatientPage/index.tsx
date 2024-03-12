@@ -12,6 +12,7 @@ const PatientPage = () => {
 
   // STATE 2 : To Manage Current Page Number Selected By The User : Initially(1)
   const [ currentPageNumber, setCurrentPageNumber ] = useState(1);
+  // console.log(currentPageNumber);
 
   // Number Of Records To Fetch:
   const limit:number = 100;
@@ -75,7 +76,7 @@ const PatientPage = () => {
       }
     </div>
     
-    <Pagination totalNumberOfPatientsRecord={patient.length} numberOfRecordsPerPage={numOfRecordsPerPage} setCurrentPage={setCurrentPageNumber} />
+    <Pagination total={patient.length} limit={numOfRecordsPerPage} setCurrentPageNumber={setCurrentPageNumber} />
 
   </div>
   );
