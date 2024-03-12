@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination-button {
+    flex-wrap: wrap;
+    width: 40px;
+    height: 40px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    color: #323131;
+    background: #82a2d1;
+    justify-content: center;
+}
+
+.pagination-button:hover {
+    font-weight: 900;
+    color: white;
+    background: #4f83d0;
+    transition: all 0.5s ease;
+}
+
+.pagination-button:active {
+    font-weight: 900;
+    color: white;
+    background: #1f65ce;
+    transition: all 0.5s ease;
+}

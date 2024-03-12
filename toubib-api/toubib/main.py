@@ -111,3 +111,10 @@ def get_patient(*, patient_id: int, session: Session):
 
 
 # FIXME: 🥸 Add the endpoint to delete a patient
+# Delete API for patient
+@app.delete("/v1/patients/{patient_id}", status_code=HTTPStatus.NO_CONTENT)
+def delete_patient(*, patient_id: int, session: Session):
+    stmt = delete(Patient).where(Patient.id == patient_id)
+    res = session.execute(stmt)
+    if not res.rowcount:
+        raise HTTPException(HTTPStatus.NOT_FOUND)
