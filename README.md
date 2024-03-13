@@ -25,7 +25,7 @@ You have to complete these 4 tasks:
 
 Connect the app to the API to display the list of patients.
 The app should automatically fetch patients when it starts.
-Add tests.
+Add tests. : Having trouble running the test case with command pytest <filname>
 
 ## 2. Create a responsive grid card layout for the patients : Completed
 
@@ -40,7 +40,7 @@ The pagination should be responsive.
 
 ## 4. Complete the delete patient feature : Completed
 
-Add the endpoint with the relevant tests.
+Add the endpoint with the relevant tests. : Having trouble running the test case with command pytest <filname>
 Hook the app to use the newly created endpoint to be able to delete patients by clicking on a trash icon.
 
 # App Quickstart
